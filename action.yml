@@ -11,6 +11,8 @@ inputs:
     description: 'api-key'
   content:
     description: 'content'
+  failure:
+    description: 'failure'
 runs:
   using: "node20"
   main: "dist/send.js"
