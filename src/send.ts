@@ -44,9 +44,9 @@ class NotificationService {
 }
 
 async function main() {
-    const user_id = core.getInput('USER_ID', { required: true });
-    const api_key = core.getInput('API_KEY', { required: true });
-    const content = core.getInput('CONTENT', { required: true });
+    const user_id = core.getInput('user-id', { required: true });
+    const api_key = core.getInput('api-key', { required: true });
+    const content = core.getInput('content', { required: true });
 
     let github_repo = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
     let service = new NotificationService(`${github_repo} 打包`, api_key, user_id);
