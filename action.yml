@@ -7,10 +7,8 @@ author: "justin"
 inputs:
   user-id:
     description: 'user-id'
-    default: ${{secrets.NOTIFICATION_USER_ID}}
   api-key:
     description: 'api-key'
-    default: ${{secrets.NOTIFICATION_API_KEY}}
   content:
     description: 'content'
 runs:
