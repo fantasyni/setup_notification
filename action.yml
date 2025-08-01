@@ -1,0 +1,9 @@
+name: "Setup Notification"
+description: "Setup Notification."
+branding:
+  icon: 'arrow-down'
+  color: 'green'
+author: "justin"
+runs:
+  using: "node20"
+  main: "dist/send.js"
