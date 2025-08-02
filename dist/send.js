@@ -20907,9 +20907,7 @@ async function main() {
   let github_repo = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
   let service = new NotificationService(`build move package: ${github_repo}`, api_key, user_id);
   let run_url = `${github_repo}/actions/runs/${run_id}`;
-  await service.send_content(`result:
-${run_url}
-${content}`);
+  await service.send_content(`result: ${run_url} ${content}`);
 }
 main();
 /*! Bundled license information:
