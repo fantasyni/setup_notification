@@ -20905,6 +20905,8 @@ async function main() {
   const api_key = core.getInput("api-key", { required: true });
   let content = core.getInput("content");
   const failure = core.getInput("failure");
+  console.log(content);
+  console.log(failure);
   let github_repo = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
   let service = new NotificationService(`${github_repo} \u6253\u5305`, api_key, user_id);
   if (failure) {
