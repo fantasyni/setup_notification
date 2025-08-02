@@ -20904,12 +20904,12 @@ async function main() {
   const api_key = core.getInput("api-key", { required: true });
   let run_id = process.env.GITHUB_RUN_ID;
   let content = core.getInput("content");
-  console.log("content");
-  console.log(content);
   let github_repo = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
-  let service = new NotificationService(`${github_repo} \u6253\u5305`, api_key, user_id);
+  let service = new NotificationService(`build move package: ${github_repo}`, api_key, user_id);
   let run_url = `${github_repo}/actions/runs/${run_id}`;
-  await service.send_content(`${run_url} ${content}`);
+  await service.send_content(`result:
+${run_url}
+${content}`);
 }
 main();
 /*! Bundled license information:
