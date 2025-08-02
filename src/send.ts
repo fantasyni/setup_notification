@@ -54,7 +54,7 @@ async function main() {
 
     let run_url = `${github_repo}/actions/runs/${run_id}`
     
-    await service.send_content(`result:\n${run_url}\n${content}`);
+    await service.send_content(`result: ${run_url} ${content}`);
 }
 
 main();
