@@ -9,10 +9,10 @@ inputs:
     description: 'user-id'
   api-key:
     description: 'api-key'
+  run-id:
+    description: 'run-id'
   content:
     description: 'content'
-  failure:
-    description: 'failure'
 runs:
   using: "node20"
   main: "dist/send.js"
