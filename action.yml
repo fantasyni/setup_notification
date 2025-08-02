@@ -9,8 +9,6 @@ inputs:
     description: 'user-id'
   api-key:
     description: 'api-key'
-  run-id:
-    description: 'run-id'
   content:
     description: 'content'
 runs:

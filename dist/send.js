@@ -20902,7 +20902,7 @@ var NotificationService = class {
 async function main() {
   const user_id = core.getInput("user-id", { required: true });
   const api_key = core.getInput("api-key", { required: true });
-  let run_id = core.getInput("run-id", { required: true });
+  let run_id = process.env.GITHUB_RUN_ID;
   let content = core.getInput("content");
   let github_repo = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
   let service = new NotificationService(`${github_repo} \u6253\u5305`, api_key, user_id);
