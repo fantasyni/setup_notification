@@ -50,7 +50,7 @@ async function main() {
     let content = core.getInput('content');
 
     let github_repo = `https://github.com/${process.env.GITHUB_REPOSITORY}`;
-    let service = new NotificationService(`build move package: ${github_repo}`, api_key, user_id);
+    let service = new NotificationService(`build: ${github_repo}`, api_key, user_id);
 
     let run_url = `${github_repo}/actions/runs/${run_id}`
     
